@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BAD MAR ELECTRIC SRL" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ItemsTable" uuid="8a1c43a7-4648-41e7-825d-b39f66ba442a">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="id" class="java.lang.Long"/>
+		<field name="model" class="java.lang.String"/>
+		<field name="series" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="CollectionBeanParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="serial" class="java.lang.Long"/>
+	<parameter name="date" class="java.util.Date"/>
+	<parameter name="tel" class="java.lang.String"/>
+	<parameter name="banNumber" class="java.lang.String"/>
+	<parameter name="clientCompany" class="java.lang.String"/>
+	<parameter name="clientAddress" class="java.lang.String"/>
+	<parameter name="lEI" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="792">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="123" y="0" width="315" height="30" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTRACT PENTRU SERVICII DE INTRETINERE PENTRU INSTALATII DE RIDICAT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="30" width="80" height="18" uuid="ac658e0e-8b95-47fe-9bb7-1ec3954cdb9a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NR# " + $P{serial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="30" width="130" height="18" uuid="5240e283-af68-464f-870f-719b50f1a7e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DIN DATA: " + $P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="56" width="510" height="70" uuid="07bf81d6-e99e-4f88-ab4a-456ee0efdcf7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Incheiat intre : \n" +
+    $P{clientCompany} +" "+ $P{clientAddress} +"  tel: " +$P{tel} +
+    " CUI  RO43751036, cont IBAN " +$P{banNumber}+", deschis la....................................................................................., " +
+    "reprezentata prin …………………………………………. in functia..........................................................................., in calitate de beneficiar, " +
+    "pe de altă parte, " +
+    "Si"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="128" width="510" height="54" uuid="bf9d772b-d0af-4a58-ab8c-1a93e9c4e316"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[				            cu sediul in Craiova,str.Soseaua Popoveni ,nr.43 A, Jud. Dolj, Telefon: 0740055200, înregistrata la Registrul Comerţului la nr. 					  având cod IBAN 			    deschis la ING BANK, reprezentată de Administrator Dl. Stan Stefan, în calitate de prestator, pe de alta parte, s-a încheiat prezentul contract pentru servicii]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="130" width="180" height="20" uuid="43136055-31ef-4341-8fcd-6a081a488695"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.C. METROINSTAL CERTIFICARE S.R.L.  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="170" y="141" width="160" height="20" uuid="918614a7-43a8-46f9-a2f3-c230b81f22f5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[J16/2510/22.11.2023, CUI R O 49171526,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="399" y="141" width="120" height="20" uuid="bc058c5b-dec1-4662-a998-4a837832328a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RO 74INGB0000999914797026]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="182" width="157" height="18" uuid="2d3176cd-985c-44cf-bac8-b9d8c8add7a6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBIECTUL CONTRACTULUI:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="193" width="125" height="1" uuid="f45511e5-b9d7-4966-8fe7-6f2353fa0e3e"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="198" width="540" height="64" uuid="0bedd5ed-5926-499b-9eed-17d623f3916b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[      Servicii de intretinere si revizie pentru instalatii de ridicat ce se afla sub prescriptia tehnica ISCIR R1/2010. Serviciile cuprind intretinerea si revizia periodica a echipamentelor cuprinse in anexa, la solicitarea beneficiarului.
+Lucrările de reparatie pentru defectiuni si materialele pentru revizie constatate pe parcursul lucrarilor de intretinere, care intra in sarcina executantului, se vor efectua numai dupa acceptul beneficiarului asupra costurilor estimate de executant.
+      Toate lucrarile se vor efectua în conformitate cu prescriptiile R1-2010, Colectia I.S.C.I.R si normele de intretinere si service elaborate de producator.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="285" width="540" height="285" uuid="79299f46-3bff-4daf-8f1d-d7d0b36807bf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Prestatorul se obligă :
+Sa efectueze lucrarile de revizie la termenul stabilit in graficul intocmit de comun acord cu beneficiarul, sa detina toate autorizatiile, avizele necesare desfasurarii activitatilor ce fac obiectul prezentul contract.
+Lucrarile de revizie sa fie de buna calitate.
+Să asigure posibilitatea achizitionarii pieselor si subansamblelor necesare efectuarii lucrarilor de reparatie
+Prestatorul va intocmi un proces verbal in urma finalizarii interventiei/iilor sau va inscrie lucrarile executate in registrul de supraveghere a instalatiei.
+In cazul in care, in cadrul lucrarilor de revizie, ori in cazul solicitarii la urgenta, se constata defectiuni sau uzura unor piese si este necesara inlocuirea lor, echipa tehnica va mentiona aceasta in procesele verbale iar prestatorul va pune la dispozitie oferta de pret. Nu se vor face lucrari suplimentare, in afara celor stipulate in contract, fara acordul scris al beneficiarului.
+Prestatorul are obligaţia de a începe prestarea serviciilor începând cu data semnarii contractului.
+În cazul în care prestatorul suferă întârzieri şi/sau suportă costuri suplimentare, datorate în exclusivitate beneficiarului, părţile vor stabili de comun acord: a) prelungirea perioadei de prestare a serviciului; şi b) totalul cheltuielilor aferente, dacă este cazul, care se vor adăuga la preţul contractului.
+Serviciile prestate în baza contractului sau, dacă este cazul, oricare fază a acestora prevăzută a fi terminată într-o perioadă stabilită în caietul de sarcini trebuie finalizate în termenul convenit de părţi, termen care se calculează de la data începerii prestării serviciilor.
+În cazul în care: i) orice motive de întârziere, ce nu se datorează prestatorului; sau ii) alte circumstanţe neobişnuite, susceptibile de a surveni altfel decât prin încălcarea contractului de către prestator, îndreptăţesc prestatorul de a solicita prelungirea perioadei de prestare a serviciilor sau a oricărei faze a acestora, atunci părţile vor revizui, de comun acord, perioada de prestare şi vor semna un act adiţional.
+Dacă pe parcursul îndeplinirii contractului prestatorul nu respectă termenul de prestare a serviciilor, acesta are obligaţia de a notifica acest lucru, în timp util, beneficiarului. - În afara cazului în care beneficiarul este de acord cu o prelungire a termenului de execuţie, orice întârziere în îndeplinirea contractului dă dreptul beneficiarului de a solicita penalităţi prestatorului
+
+BENEFICIARUL se obliga :
+Să exploateze instalatiiile corespunzator, respectand strict destinatia de utilizare sarcina maxima autorizata si instructiunile de folosire si intretinere din manualul de utilizare al echipamentului.
+Să puna la dispozitia echipei de tehnicieni caietul de intretinere al echipamentului (daca este cazul),
+Sa plateasca pretul contractului, astfel cum este acceptat de catre parti, la termenele stabilite si acceptate.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="269" width="110" height="18" uuid="120f3cb6-92ff-47f3-a129-c00c67a4863a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBLIGATIA PARTILOR:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="282" width="105" height="1" uuid="0dccd8b9-3452-4d0f-92a4-e9646df66eb3"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="586" width="157" height="18" uuid="1baa32c4-fbc0-4699-a293-bcc07b96faf7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRETUL CONTRACTULUI :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="597" width="118" height="1" uuid="9e8f091a-201e-464c-8615-8ca924ffb3da"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="10" y="602" width="540" height="90" uuid="9ef77bd9-4bce-4221-9484-1ba632456670"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pretul contractului privind serviciile de intretinere a echipamentelor este: " +$P{lEI}+ " lei +TVA/an \n"+
+
+    "Plata se face in termen de 30 zile de la data emiterii facturii fiscale \n"+
+"Pretul contine cheltuielile de deplasare fara alte materialele pentru intretinere (ex.lavete, spray pentru degresare, vaselina, solutii de curatat, etc) Pretul nu contine costul pieselor uzate sau stricate in procesul de utilizare. Pretul contractului este ferm si nu se modifica pe toata durata contractului ; In cazul in care durata contractului se prelungeste printr-un act aditional pretul contractului se poate modifica doar in cazuri bine justificate."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="717" width="508" height="34" uuid="7e6253ef-dda0-4a0f-b749-10bcde1a96d4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Garantia pentru lucrările efectuate este:
+Lucrări de revizie: 12 luni de zile pentru operatiile specifice reviziei.
+Lucrările efectuate se execută numai cu personal calificat si autorizat ISCIR, specializat.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="701" width="157" height="18" uuid="1e7ed997-9834-436d-b8e0-21eb33d46ba5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GARANTII:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="712" width="48" height="1" uuid="c9af88bf-a8fa-4299-bdf4-590ae3aee88d"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="11" y="778" width="508" height="14" uuid="cb9bbaf6-fb7f-435c-a5c3-331edb417b50"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Durata contractului : 12 luni de la data semnarii contractului cu posibilitatea prelungirii contractului printr-un act aditional.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="762" width="157" height="18" uuid="a7c642d9-947a-42f7-9a2b-cd02ad889866"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DURATA CONTRACTULUI:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="773" width="117" height="1" uuid="2a36dd55-607c-4cca-b5cb-65c8fa1a7f62"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="1" splitType="Prevent">
+			<break>
+				<reportElement x="0" y="0" width="1" height="1" uuid="d02d2d54-9c3b-4f2a-8f25-55d0dfea9e5d"/>
+			</break>
+		</band>
+		<band height="553" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="17" width="157" height="18" uuid="84ec92f8-632a-4cad-b1c4-c664a6aecc8a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONDITII SPECIALE:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="28" width="93" height="1" uuid="83226c2b-39d4-4dfd-9eaa-1e6115968dda"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="11" y="33" width="539" height="67" uuid="d29febbf-fe99-4504-813e-3bc245761bdc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[În cazul în care, din vina sa exclusivă, prestatorul nu reuşeşte să-şi îndeplinească obligaţiile asumate, atunci beneficiarul are dreptul de a deduce din preţul contractului, ca penalităţi, o sumă echivalentă cu o cotă procentuală din preţul contractului – 0.01% / zi.
+În cazul în care beneficiarul nu îşi onorează obligaţiile în termen de 15 de zile de la expirarea perioadei convenite, atunci acestuia îi revine obligaţia de a plăti, ca penalităţi, o sumă echivalentă cu o cotă procentuală din plata neefectuată – 0.01% / zi.
+Nerespectarea obligatiilor asumate prin prezentul contract de catre una dintre parti da dreptul partii lezate de a cere rezilierea contractului si de a pretinde plata de daune interese.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="109" width="157" height="18" uuid="25fe9f9b-898b-480b-bdb0-fe08c36ac756"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORTA MAJORA:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="120" width="75" height="1" uuid="f0ee2970-6a34-426b-98b9-dc2949afef08"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="125" width="539" height="74" uuid="58c7fc7a-9d42-4124-affb-07813d2a0f56"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Orice imprejurare independenta de vointa partilor contractante, intervenita dupa data semnarii contractului si care impiedica executarea acestuia este considerata ca forta majora si exonereaza de raspundere partea care o invoca. Sunt considerate ca forta majora, in sensul acestei clauze, imprejurari ca: razboi, revolutie, calamitati. Partea care invoca forta majora trebuie sa anunte cealalta parte in termen de 10 zile de la data aparitiei respectivului caz de forta majora.
+Dupa incetarea cazului de forta majora, partea care l-a invocat,isi va relua obligatiile contractuale in termen de 3 zile si va anunta cealalta parte. Daca nu procedeaza la anuntarea, in termenele prevazute mai sus, a inceperii si incetarii cazului de forta majora,partea care il invoca va suporta toate daunele provocate celeilalte parti prin neanuntarea in termen.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="209" width="157" height="18" uuid="b9ec6112-d82f-4293-a757-99c15fadf260"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CESIUNEA CONTRACTULUI:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="220" width="124" height="1" uuid="c5a65b53-b3b4-4aca-8367-8f6f92398e8e"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="225" width="539" height="50" uuid="ec5ef392-ffc0-4105-a143-b8565d126785"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Nici una din partile prezentului contract nu va cesiona drepturile si obligatiile sale rezultate din acest contract unei terte persoane, fara acordul scris al celeilalte parti.
+Acordul scris trebuie comunicat cedentului in termen de maximum 5 de zile de la data la care cedentul a cerut cedatului consimtamantul.
+In cazul in care cedatul nu raspunde in termenul mai sus aratat se considera ca cedatul nu consimte la cesiunea contractului.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="283" width="157" height="18" uuid="8e0eb790-5e65-404f-bdc5-2ac5e286bf97"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LITIGII:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="294" width="35" height="1" uuid="36c88b60-8d75-4b27-b7a4-ea9c3c80da69"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="299" width="539" height="30" uuid="08bc50d4-9af7-4597-a412-1c56a5fef976"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Orice litigiu decurgand din prezentul contract,inclusiv referitor la validitatea, interpretarea, executarea ori desfiintarea contractului se va solutiona de catre instantele judecatoresti competente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="341" width="157" height="18" uuid="40aab87f-bbec-44db-b083-594724686282"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INCETAREA CONTRACTULUI:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="352" width="132" height="1" uuid="72c0a3b5-18f2-4605-b540-972ecdacfa98"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="357" width="539" height="60" uuid="2929db81-8927-4519-acb9-9ce62c36a76d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Prezentul contract inceteaza in urmatoarele cazuri:
+-la expirarea termenului pentru care a fost incheiat;
+-la initiativa uneia din partile contractante, cu un preaviz de 15 zile lucratoare;
+-prin acordul scris al ambelor parti contractante.
+-fara nicio notificare la data scadenta a platii chiar daca nu s-a emis factura, daca plata nu a fost efectuata.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="426" width="157" height="18" uuid="6181b6bc-8317-48b2-bed3-e4a3ab81562a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISPOZITII FINALE:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="437" width="88" height="1" uuid="42058c23-9e6c-47f5-9658-7c50f08c6293"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="442" width="539" height="30" uuid="e2aae655-5ef9-4094-92e9-6889d48bd29f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Orice modificare la contract, se va face cu acordul partilor printr-un act aditional. Contractul s-a încheiat în 2 exemplare, originale, câte unul pentru fiecare parte.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="494" width="79" height="16" uuid="bf24a6f4-2565-460e-bb3a-b56228d2061b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFICIAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="510" width="178" height="28" uuid="f3776f04-da0a-4701-a30d-2ddc95720f7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRESTATOR
+SC METROINSTAL CERTIFICARE SRL
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="399" y="472" width="50" height="50" uuid="f5da33ba-93d6-4648-92cd-625811a38c52"/>
+				<imageExpression><![CDATA["C:/Users/mehedi.hasan/Downloads/Picture1.png"]]></imageExpression>
+			</image>
+		</band>
+		<band height="1" splitType="Prevent">
+			<break>
+				<reportElement x="0" y="0" width="1" height="1" uuid="d02d2d54-9c3b-4f2a-8f25-55d0dfea9e5d"/>
+			</break>
+		</band>
+		<band height="449">
+			<staticText>
+				<reportElement x="58" y="40" width="439" height="18" uuid="c3ab09ac-5560-4552-89b9-7c5f0aa0e608"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANEXA NR. 1 la CONTRACTUL PENTRU SERVICII DE INTRETINERE INSTALATII DE RIDICAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="316" width="79" height="16" uuid="f3c275ec-2292-4cf9-b69b-e7a22944fa25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFICIAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="310" width="178" height="28" uuid="46191c88-ffa6-458a-afb3-aadd4c1745e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRESTATOR
+SC METROINSTAL CERTIFICARE SRL
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="434" y="260" width="50" height="50" uuid="00e4b297-4d5b-4204-93d7-31fa265c75b6"/>
+				<imageExpression><![CDATA["C:/Users/mehedi.hasan/Downloads/Picture1.png"]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement x="12" y="70" width="530" height="130" uuid="a7576c2f-2304-434f-bd83-d800131dfce1">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ItemsTable" uuid="0965a8da-fa3a-432e-8f91-ea822575108c">
+						<dataSourceExpression><![CDATA[$P{CollectionBeanParam}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="28fdf13f-66d6-4def-9b21-67eba6f6bb9d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" forecolor="#FFFFFF" uuid="777c9c24-3a87-450c-8e8b-00b74db1c09a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Nr. Crt.
+]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="84835cf6-e3cc-4c18-994b-73fd51d58614"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="290" uuid="12e1f94e-4e29-4aba-9e74-34ad118b34b3">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="290" height="30" forecolor="#FFFFFF" uuid="901a4d95-208b-47be-b8ad-124ebad3ecb2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Marca si Model]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="dd-MM-yyyy">
+								<reportElement x="0" y="0" width="290" height="30" uuid="4fb41537-d976-41ee-ac28-935bf2c63fd0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="86d3bd5d-3be8-41fe-a317-2cc9edd6ee80">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="30" forecolor="#FFFFFF" uuid="51d15d07-fd63-4dc3-bf1c-91fe65a55df0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Serie/an fabricatie]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="180" height="30" uuid="ded679da-8d9c-4d95-9274-4de6a159fc64"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{series}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

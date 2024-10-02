@@ -1,0 +1,29 @@
+<div *ngIf="!isConfirmation">
+    <div class="modal-header bg-{{class}} d-flex align-items-center" style="padding: 8px 10px">
+        <h3 class="modal-title text-center text-white m-0">
+            <i class="{{iconClass}}"></i> {{messageType}}
+        </h3>
+    </div>
+    <div class="modal-body text-center">
+        <p style="margin: 0;font-size: 1.3rem">{{message }}</p>
+    </div>
+    <div class="modal-footer text-right" style="padding: 5px">
+        <button class="btn btn-sm btn-rounded btn-{{class}}" (click)="close()" style="padding: 3px 15px">Close</button>
+    </div>
+</div>
+
+<div *ngIf="isConfirmation">
+    <div class="modal-header bg-{{class}} d-flex align-items-center" style="padding: 8px 10px">
+        <h3 class="modal-title text-center text-white m-0">
+            <i class="{{iconClass}}"></i> {{messageType}}
+        </h3>
+    </div>
+    <div class="modal-body text-center">
+        <p style="margin: 0; font-size: 1.3rem">{{message}}</p>
+    </div>
+    <div class="modal-footer text-right" style="padding: 3px">
+        <button class="btn btn-sm btn-rounded btn-secondary" (click)="close()" style="padding: 3px 15px">Cancel</button>
+        <button class="btn btn-sm btn-rounded btn-{{class}}" (click)="confirm()" style="padding: 3px 15px">Confirm
+        </button>
+    </div>
+</div>

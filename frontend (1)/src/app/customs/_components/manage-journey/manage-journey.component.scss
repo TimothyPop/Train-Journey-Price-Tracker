@@ -1,0 +1,29 @@
+.list-group {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.card-body h4, .card-body h3 {
+    font-family: 'Roboto', sans-serif; /* Use a modern, clean font */
+}
+
+.card-footer {
+    background-color: #f8f9fa; /* Subtle background for the footer */
+}
+
+//.card:hover {
+//    transform: scale(1.02);
+//    transition: transform 0.2s ease-in-out;
+//}
+
+

@@ -1,0 +1,57 @@
+<ngx-spinner [fullScreen]="true">
+    <p style="font-size: 20px; color: white">Please wait...</p>
+</ngx-spinner>
+<mat-card class="daxa-card recent-orders-card mb-25 border-radius bg-white border-none d-block"
+          [class.rtl-enabled]="themeService.isRTLEnabled()">
+</mat-card>
+
+<ng-container *ngIf="searchResult">
+    <div class="row text-center">
+        <div class="col-lg-4 col=md-2 col-sm-12 text-center" *ngFor="let sr of searchResult">
+            <div class="card shadow  mb-4 border-0 m-2 " [ngClass]="{'bg-secondary': isTimeInPast(sr.dateStart)}"
+                 style="max-width: 600px; border-radius: 5px;">
+                <div class="card-body">
+                    <p class="mb-1 text-dark">{{sr.name}}</p>
+                    <div class="row align-items-center">
+                        <div class="col-5 text-start">
+                            <p class="mb-1 text-dark">Departs</p>
+                            <p class="mb-0 text-dark"
+                               style="font-weight: bold;font-size:0.7rem">{{convertTime(sr.dateStart)}}</p>
+                            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">{{sr.origin}} <span
+                                class="fw-bold">({{sr.originCrs}} )</span></p>
+                        </div>
+                        <div class="col-2 text-center">
+                            <i class="bi bi-arrow-right-circle-fill text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div class="col-5 text-end">
+                            <p class="mb-1 text-dark">Arrives</p>
+                            <p class="mb-0 text-dark"
+                               style="font-weight: bold;font-size:0.7rem">{{convertTime(sr.dateTime)}}</p>
+                            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">{{sr.destination}}  <span
+                                class="fw-bold">({{sr.desCrs}})</span>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="my-3">
+                    <div class="row align-items-center">
+                        <div class="col-5 text-left">
+                            <p class="mb-1 text-dark">Price</p>
+                            <h4 class="text-success" style="font-weight: bold;">£ {{sr.totalLowestPrice}}</h4>
+                        </div>
+
+                        <div class="col-5 text-center">
+                            <p class="mb-1 text-dark">Travel duration</p>
+                            <h4 class="text-success" style="font-weight: bold;">{{sr.duration}}</h4>
+                        </div>
+
+                        <div class="col-2 text-center">
+                            <button class="btn btn-outline-success" *ngIf="!isTimeInPast(sr.dateStart)"
+                                    (click)="refreshPrice(sr)">
+                                <i class="fa fa-refresh"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

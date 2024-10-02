@@ -1,0 +1,35 @@
+
+  "regis_unsuccessful" : "Registration Failed. Try Again!",
+  "logged_successful" : "Log In Successful",
+  "username_taken" : "Username Already Taken",
+
+
+  "class_create_successful" : "Classes Created Successfully",
+  "class_create_failed" : "Classes Created Failed",
+  "class_updated_success" : "Classes Updated Successfully",
+  "class_updated_failed" : "Classes Updated Failed",
+  "class_deleted_success" : "Classes Deleted Successfully",
+  "class_deleted_failed" : "Classes Deleted Failed",
+  "no_class_found_for_student" : "No Classes Found for this Student",
+  "invalid_student_id" : "Invalid Student ID",
+  
+  
+  "rating_cat_created_successful" : "Rating Category Created Successfully",
+  "rating_cat_created_failed" : "Rating Category Created Failed",
+  "rating_cat_id_invalid" : "Rating Category ID Invalid",
+  "rating_cat_deleted_successful" : "Rating Category Deleted Successfully",
+  
+  
+  "rating_submitted_successful" : "Rating  Submitted Successfully",
+  "rating_submitted_failed" : "Rating  Submitted Failed",
+  "invalid_rating_id" : "Invalid Rating ID",
+  "rating_deleted_successful" : "Rating Deleted Successfully",
+  
+  
+  "student_created_successful" : "Student Created Successfully",
+  "invalid_class_or_student_id" : "Invalid Classe or Student ID",
+  "no_student_for_class" : "No Sudents Found for this Class",
+  "invalid_class_id" : "Invalid Classe ID",
+  "invalid_parent_id" : "Invalid Parent ID",
+  
+  

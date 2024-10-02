@@ -1,0 +1,175 @@
+<ngx-spinner [fullScreen]="true">
+    <p style="font-size: 20px; color: white">Please wait...</p>
+</ngx-spinner>
+<mat-card class="daxa-card recent-orders-card mb-25 border-radius bg-white border-none d-block"
+          [class.rtl-enabled]="themeService.isRTLEnabled()">
+    <div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+        <button class="btn btn-outline-success" (click)="openModal(content)">
+            <i class="fa fa-plus-circle"></i> Search Journey
+        </button>
+    </div>
+
+    <ng-template #content let-modal>
+        <!-- Textual Inputs -->
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Journey search</h5>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="form-group col-lg-6 mt-4">
+                            <label for="departure">Departing from</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="departure"
+                                name="departure"
+                                [ngModelOptions]="{ standalone: true }"
+                                placeholder="London Bridge"
+                                [(ngModel)]="queryDeparture"
+                                (input)="onSearchDep()"
+                            />
+                            <ul *ngIf="stationsDep.length > 0" class="list-group">
+                                <li
+                                    *ngFor="let station of stationsDep"
+                                    class="list-group-item"
+                                    (click)="selectStationDep(station)"
+                                >
+                                    {{ station.stationName }} ({{ station.crsCode }})
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group col-lg-6 mt-4">
+                            <label for="destination">Going to</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="destination"
+                                name="destination"
+                                [ngModelOptions]="{ standalone: true }"
+                                placeholder="London Bridge"
+                                [(ngModel)]="queryDestination"
+                                (input)="onSearchDes()"
+                            />
+                            <ul *ngIf="stationsDes.length > 0" class="list-group">
+                                <li
+                                    *ngFor="let station of stationsDes"
+                                    class="list-group-item"
+                                    (click)="selectStationDes(station)"
+                                >
+                                    {{ station.stationName }} ({{ station.crsCode }})
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group col-lg-6 mt-4">
+                            <label for="date">I'm leaving</label>
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="date"
+                                [(ngModel)]="departureDate"
+                                name="departureDate"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group col-lg-6 mt-4">
+                            <label for="time">Departing after</label>
+                            <input
+                                type="time"
+                                class="form-control"
+                                id="time"
+                                [(ngModel)]="departureTime"
+                                name="departureTime"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group col-lg-6 mt-4">
+                            <label>Adults (16+)</label>
+                            <select
+                                class="form-control"
+                                id="adults"
+                                [(ngModel)]="adults"
+                                name="adults"
+                                required
+                            >
+                                <option *ngFor="let num of [1, 2, 3, 4]" [value]="num">{{ num }}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-6 mt-4">
+                            <label>Children (5-15)</label>
+                            <select
+                                class="form-control"
+                                id="children"
+                                [(ngModel)]="children"
+                                name="children"
+                                required
+                            >
+                                <option *ngFor="let num of [0, 1, 2, 3]" [value]="num">{{ num }}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row mt-4 text-center">
+                            <button
+                                type="submit"
+                                class="btn btn-outline-success btn-block"
+                            >
+                                <i class="fa fa-search"></i> Get times and prices
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ng-template>
+</mat-card>
+
+<ng-container *ngIf="searchResult">
+    <div class="row text-center" >
+        <div class="col-lg-4 col=md-2 col-sm-12 text-center"  *ngFor="let sr of searchResult.outwardJourneys">
+            <div class="card shadow mb-4 border-0 m-2" style="max-width: 600px; border-radius: 5px;">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-5 text-start">
+                            <p class="mb-1 text-dark">Departs</p>
+                            <p class="mb-0 text-dark" style="font-weight: bold;font-size:0.7rem">{{convertTime(sr.timetable.scheduled.departure)}}</p>
+                            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">{{sr.origin.name}} <span
+                                class="fw-bold" style="font-size: 0.9rem;">({{sr.origin.crsCode}} )</span></p>
+                        </div>
+                        <div class="col-2 text-center">
+                            <i class="bi bi-arrow-right-circle-fill text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div class="col-5 text-end">
+                            <p class="mb-1 text-dark">Arrives</p>
+                            <p class="mb-0 text-dark" style="font-weight: bold;font-size:0.7rem">{{convertTime(sr.timetable.scheduled.arrival)}}</p>
+                            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">{{sr.destination.name}}  <span
+                                class="fw-bold" style="font-size: 0.9rem;">({{sr.destination.crsCode}})</span>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="my-3">
+                    <div class="row align-items-center">
+                        <div class="col-5 text-left">
+                            <p class="mb-1 text-dark">Price</p>
+                            <h4 class="text-success" style="font-weight: bold;">£ {{sr.fares[0].totalPrice/100}}</h4>
+                        </div>
+
+                        <div class="col-5 text-center">
+                            <p class="mb-1 text-dark">Travel duration</p>
+                            <h4 class="text-success" style="font-weight: bold;">{{sr.duration}}</h4>
+                        </div>
+
+                        <div class="col-2 text-center">
+                            <button class="btn btn-outline-primary" (click)="saveJourney(sr)"><i class="fa fa-save"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
