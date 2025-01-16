@@ -10,5 +10,4 @@ The backend is hosted on AWS EC2, with the frontend deployed on AWS S3, and data
 
 
 
-Website Link - http://train-journey-tracker-frontend.s3-website.eu-north-1.amazonaws.com/
 Youtube Demo - https://www.youtube.com/watch?v=BCwKhsko6BQ
